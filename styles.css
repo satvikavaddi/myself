@@ -1,41 +1,123 @@
+/* Base Layout & Clean Resets */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6;
-    color: #333;
+    background-color: #f5f8fa; /* Soft tech grey/blue background */
+    color: #333333;
 }
 
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2.5rem 1.2rem;
+}
+
+/* Header Banner - Sleek Tech Gradient */
 header {
-    background: #2c3e50;
+    background: linear-gradient(135deg, #1e293b, #0f172a); /* Deep slate/DevOps aesthetic */
     color: #ffffff;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 header p {
-    margin: 0.5rem 0 0 0;
-    font-size: 1.2rem;
-    color: #bdc3c7;
+    margin: 0.8rem 0 0 0;
+    font-size: 1.25rem;
+    color: #38bdf8; /* Bright terminal blue accent */
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
+/* Professional Card Section Styling */
 section {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
     background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.5rem;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(15, 23, 42, 0.04);
+    border-left: 5px solid #38bdf8; /* Accent border on the left side */
+    transition: transform 0.2s ease;
+}
+
+/* Subtle interactive hover effect for the section cards */
+section:hover {
+    transform: translateY(-2px);
 }
 
 section h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #ecf0f1;
-    padding-bottom: 0.5rem;
+    color: #1e293b;
+    margin-top: 0;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 0.6rem;
+}
+
+/* Profile paragraph styling */
+#profile p {
+    font-size: 1.05rem;
+    color: #475569;
+}
+
+/* Education Layout Rules */
+.education-item h3 {
+    margin: 0.5rem 0 0.2rem 0;
+    color: #0f172a;
+    font-size: 1.3rem;
+}
+
+.education-item p {
+    color: #475569;
+    margin-bottom: 1rem;
+}
+
+/* Style the second paragraph within education uniquely */
+.education-item p:last-child {
+    background-color: #f0fdf4; /* Light green info box */
+    border-left: 3px solid #22c55e;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #166534;
+    margin-bottom: 0;
+}
+
+/* Interests & Hobbies Custom Styling */
+#hobbies p {
+    font-size: 1.05rem;
+    color: #475569;
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Adding subtle, cute custom bullet points manually for your two separate text strings */
+#hobbies p:first-of-type::before {
+    content: "🎵";
+    position: absolute;
+    left: 0;
+}
+
+#hobbies p:last-of-type::before {
+    content: "🏆";
+    position: absolute;
+    left: 0;
+}
+
+/* Minimalist Footer */
+footer {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    border-top: 1px solid #e2e8f0;
 }
